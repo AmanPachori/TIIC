@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="/assets/img/favicon.png" type="image/png">
+        <title>Events - Technology Innovation and Incubation Centre</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="/assets/vendors/linericon/style.css">
+        <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/assets/css/kaus.css">
+        <link rel="stylesheet" href="/assets/vendors/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="/assets/vendors/lightbox/simpleLightbox.css">
+        <link rel="stylesheet" href="/assets/vendors/nice-select/css/nice-select.css">
+        <link rel="stylesheet" href="/assets/vendors/animate-css/animate.css">
+        <link rel="stylesheet" href="/assets/vendors/jquery-ui/jquery-ui.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+        <!-- main css -->
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/responsive.css">
+        <link rel="stylesheet" href="/assets/css/footer.css">
+        <style>
+        .event{
+            min-height: 120px;
+            border-radius: 4px 12px;
+            font-weight: bold;
+            font-size: 24px;
+            padding-top: 30px;
+            border: 1px solid #ff0000;
+            text-align: center;
+        }
+        .img-ais{
+            max-width:100%;
+        }
+    </style>
+    </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+        <header class="">
+            <div class="">
+                <nav class="navbar navbar-expand-lg navbar-dark p-0 ">
+                    <div class="container p-2">
+                        <div class="logo_container">
+                            <!-- Place your logo here -->
+                            <img src="/assets/img/favicon.png" width="50" height="50" class="">
+                        </div>
+                        <div class="">
+                            <div id="menuContainer" class=""></div>
+                        </div>
+                    </div>
+                    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#menuContainer").load("./includes/menus.html");
+      });
+    </script>
+                </nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+        
+
+    
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-7 my-auto">
+            <div class="header-content mx-auto">
+              <h1 class="mb-5">About Us</h1>
+             
+            </div>
+          </div>
+          <div class="col-lg-5 my-auto">
+            <div class="device-container">
+              <div class="device-mockup iphone6_plus portrait white">
+                <div class="device">
+                <div style="padding: 10px;border: 2px solid #7b4397;background-color:  white;box-shadow: 4px 4px 5px #7b4397;">
+                  <div class="screen kaus-edit" style="background-color: #ffff; padding:20px 20px 20px 20px; border-radius: 5px;">
+                        <h1 style="text-align: center; color: #888    ;">
+                           TIIC<br>
+                        </h1>
+                        <p style="font-size: 12px; text-align: justify;color: #888;">
+                            <br><br>
+                             
+                            Technology Innovation and Incubation Centre is the Industrial Interface of Atal Bihari Vajpayee-Indian Institute of Information Technology & Management, Gwalior established in 2008. A registered society under MP Act 1973. This centre has been set up due the initiatives taken by IIITM faculty,students and strong alumni base.
+
+
+                        </p> 
+                    </div>
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                   
+                  </div>
+                  <div class="button">
+                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+        <section class="feature_area p_120" style="margin-top: -60px;">
+            <div class="container">
+                <div class="row">
+                    <?php
+                        foreach ($eventphotos as $eventrow) {
+                            echo '<div class="event col-md-4">
+                                <img class="img-ais" src="'.base_url('gallery/events/'.$eventrow->photo).'">
+                            </div>';
+                        }
+                    ?>
+                </div>
+            </div>
+        </section>
+
+        <footer id="myFooter" style="margin-top: 40px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h2 class="logo"><a href="#">TIIC </a></h2>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>Get started</h5>
+                        <ul>
+                            <li><a href="../pages/home.html"">Home</a></li>
+                            <li><a href="../pages/aboutus.html">About us</a></li>
+                            <li><a href="../pages/startups.html">Start ups</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>About us</h5>
+                        <ul>
+                            <li><a href="https://iiitm.ac.in/">ABV - IIITM </a></li>
+                            <li><a href="../pages/letterofrecommendation.html">L.O.R</a></li>
+                            <li><a href="/virtual_tour/VTABVIIITM.html">Virtual Tour</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>Support</h5>
+                        <ul>
+                            <li><a href="../pages/contact.html">Contact Us</a></li>
+                            <li><a href="../pages/incubationprocess.html">Incubation  Process</a></li>
+                            <li><a href="../pages/partners.html">Associations</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="social-networks">
+                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                        <button type="button" href="#" class="btn btn-default" >Contact us</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2019 - Technology Innovation and Incubation Centre</p>
+            </div>
+        </footer>
+        <!--================End Home Banner Area =================-->
+        
+      
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/js/jquery-3.2.1.min.js"></script>
+        <script src="/assets/js/popper.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/stellar.js"></script>
+        <script src="/assets/vendors/lightbox/simpleLightbox.min.js"></script>
+        <script src="/assets/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+        <script src="/assets/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="/assets/vendors/isotope/isotope-min.js"></script>
+        <script src="/assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="/assets/vendors/jquery-ui/jquery-ui.js"></script>
+        <script src="/assets/js/jquery.ajaxchimp.min.js"></script>
+        <script src="/assets/js/mail-script.js"></script>
+        <script src="/assets/js/theme.js"></script>
+    </body>
+</html>

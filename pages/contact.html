@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <title>Contact Us - Technology Innovation and Incubation Centre</title>
+<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="/assets/vendors/linericon/style.css">
+        <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/assets/css/kaus.css">
+        <link rel="stylesheet" href="/assets/vendors/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="/assets/vendors/lightbox/simpleLightbox.css">
+        <link rel="stylesheet" href="/assets/vendors/nice-select/css/nice-select.css">
+        <link rel="stylesheet" href="/assets/vendors/animate-css/animate.css">
+        <link rel="stylesheet" href="/assets/vendors/jquery-ui/jquery-ui.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+        <!-- main css -->
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/responsive.css">
+        <link rel="stylesheet" href="/assets/css/footer.css">
+            <script src='https://www.google.com/recaptcha/api.js'></script>
+
+        <style type="text/css">
+          textarea {
+  resize: none;
+}
+.form-label {
+  font-size: 12px;
+  color: black;
+  margin: 0;
+  display: block;
+  opacity: 1;
+  -webkit-transition: .333s ease top, .333s ease opacity;
+  transition: .333s ease top, .333s ease opacity;
+}
+.form-control {
+  border-radius: 0;
+  border-color: #ccc;
+    border-width: 0 0 2px 0;
+    border-style: none none solid none;
+    box-shadow: none;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: #5e9bfc;
+}
+.js-hide-label {
+  opacity: 0;   
+}
+.js-unhighlight-label {
+  color: #999 
+}
+.btn-start-order {
+  background: 0 0 #ffffff;
+    border: 1px solid #2f323a;
+    border-radius: 3px;
+    color: #2f323a;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    line-height: inherit;
+    margin: 30px 0;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    transition: all 0.25s ease 0s;
+}
+.btn-start-order:hover,.btn-start-order:active, .btn-start-order:focus {
+  border-color: #5e9bfc;
+  color: #5e9bfc;
+}
+        </style>
+        <script type="text/javascript">
+          $(document).ready(function() {
+  // Test for placeholder support
+    $.support.placeholder = (function(){
+        var i = document.createElement('input');
+        return 'placeholder' in i;
+    })();
+
+    // Hide labels by default if placeholders are supported
+    if($.support.placeholder) {
+        $('.form-label').each(function(){
+            $(this).addClass('js-hide-label');
+        });  
+
+        // Code for adding/removing classes here
+        $('.form-group').find('input, textarea').on('keyup blur focus', function(e){
+            
+            // Cache our selectors
+            var $this = $(this),
+                $parent = $this.parent().find("label");
+          
+            switch(e.type) {
+              case 'keyup': {
+                 $parent.toggleClass('js-hide-label', $this.val() == '');
+              } break;
+              case 'blur': {
+                if( $this.val() == '' ) {
+                    $parent.addClass('js-hide-label');
+                } else {
+                    $parent.removeClass('js-hide-label').addClass('js-unhighlight-label');
+                }
+              } break;
+              case 'focus': {
+                if( $this.val() !== '' ) {
+                    $parent.removeClass('js-unhighlight-label');
+                }
+              } break;
+              default: break;
+            }
+            // previous implementation with ifs
+            /*if (e.type == 'keyup') {
+                if( $this.val() == '' ) {
+                    $parent.addClass('js-hide-label'); 
+                } else {
+                    $parent.removeClass('js-hide-label');   
+                }                     
+            } 
+            else if (e.type == 'blur') {
+                if( $this.val() == '' ) {
+                    $parent.addClass('js-hide-label');
+                } 
+                else {
+                    $parent.removeClass('js-hide-label').addClass('js-unhighlight-label');
+                }
+            } 
+            else if (e.type == 'focus') {
+                if( $this.val() !== '' ) {
+                    $parent.removeClass('js-unhighlight-label');
+                }
+            }*/
+        });
+    } 
+});
+        </script>
+    </head>
+    <body>
+        
+                <!--================Header Menu Area =================-->
+        <header class="">
+            <div class="">
+                <nav class="navbar navbar-expand-lg navbar-dark p-0 ">
+                    <div class="container p-2">
+                        <div class="logo_container">
+                            <!-- Place your logo here -->
+                            <img src="/assets/img/favicon.png" width="50" height="50" class="">
+                        </div>
+                        <div class="">
+                            <div id="menuContainer" class=""></div>
+                        </div>
+                    </div>
+                    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#menuContainer").load("./includes/menus.html");
+      });
+    </script>
+                </nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+        
+
+    
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-7 my-auto">
+            <div class="header-content mx-auto">
+              <h1 class="mb-5">Contact us</h1>             
+            </div>
+          </div>
+          <div class="col-lg-5 my-auto">
+            <div class="device-container">
+              <div class="device-mockup iphone6_plus portrait white">
+                <div class="device">
+                <div style="padding: 10px;border: 2px solid #7b4397;background-color:  white;width: 150%;margin-left: -20%; box-shadow: 4px 4px 5px #7b4397;">
+                  <div class="screen kaus-edit" style="background-color: #ffff; padding:20px 20px 20px 20px; border-radius: 5px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.3761364130633!2d78.17179461461984!3d26.2494531834177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c6e5d32a4d53%3A0xf834069adc0c9b89!2sABV-Indian+Institute+of+Information+Technology+and+Management+Gwalior!5e0!3m2!1sen!2sin!4v1536955912156" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  </div>
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                   
+                  </div>
+                  <div class="button">
+                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+        <section class="feature_area p_120" style="margin-top:-120px;">
+            <div class="container">
+                <div class="kaus-mission-heading-2">
+                    <br>
+        
+                    <div class="container">
+      <div class="col-12 col-xs-offset-4" style="margin-top:120px;">
+          <h2 style="font-weight: 800;font-size: 24px;text-align:left;color: #000;">
+              Find us at the office
+          </h2>
+          <p style="text-align:left;">
+            Technology Innovation and Incubation
+            <br>Centre, F-Block
+            <br>ABV-IIITM, Gwalior
+            <br>474015-(M.P.), India
+          </p>
+          <br>
+          <h2 style="font-weight: 800;font-size: 24px;text-align:left;color: #000;">
+              Give us a ring
+          </h2>
+          <p style="text-align:left;">
+            Dr. Anurag Srivastava<br>
+            +91 751 244 9826<br>
+            +91 751 244 9615<br>
+            +91 769 769 3804<br>
+            Mon - Fri, 10:00-17:00
+          </p>
+          <h2 style="font-weight: 800;font-size: 24px;text-align:left;color: #000;">
+              Email Us
+          </h2>
+          <p style="text-align:left;">
+            <a href="mailto:coordinator@tiiciiitm.com">coordinator@tiiciiitm.com</a><br>
+            <a href="mailto:tiiciiitmg@gmail.com">tiiciiitmg@gmail.com</a><br>
+          </p>
+      </div>
+  </div>
+</div>
+                     <br>
+                </div>
+            </div>
+            <br>
+        </section>
+
+        <footer id="myFooter" style="margin-top: 40px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h2 class="logo"><a href="#">TIIC </a></h2>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>Get started</h5>
+                        <ul>
+                            <li><a href="../pages/home.html"">Home</a></li>
+                            <li><a href="../pages/aboutus.html">About us</a></li>
+                            <li><a href="../pages/startups.html">Start ups</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>About us</h5>
+                        <ul>
+                            <li><a href="https://iiitm.ac.in/">ABV - IIITM </a></li>
+                            <li><a href="../pages/letterofrecommendation.html">L.O.R</a></li>
+                            <li><a href="/virtual_tour/VTABVIIITM.html">Virtual Tour</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>Support</h5>
+                        <ul>
+                            <li><a href="../pages/contact.html">Contact Us</a></li>
+                            <li><a href="../pages/incubationprocess.html">Incubation  Process</a></li>
+                            <li><a href="../pages/partners.html">Associations</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="social-networks">
+                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                        <button type="button" href="#" class="btn btn-default" >Contact us</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2019 - Technology Innovation and Incubation Centre</p>
+            </div>
+        </footer>
+        <!--================End Home Banner Area =================-->
+        
+      
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/js/jquery-3.2.1.min.js"></script>
+        <script src="/assets/js/popper.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/stellar.js"></script>
+        <script src="/assets/vendors/lightbox/simpleLightbox.min.js"></script>
+        <script src="/assets/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+        <script src="/assets/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="/assets/vendors/isotope/isotope-min.js"></script>
+        <script src="/assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="/assets/vendors/jquery-ui/jquery-ui.js"></script>
+        <script src="/assets/js/jquery.ajaxchimp.min.js"></script>
+        <script src="/assets/js/mail-script.js"></script>
+        <script src="/assets/js/theme.js"></script>
+    </body>
+</html>

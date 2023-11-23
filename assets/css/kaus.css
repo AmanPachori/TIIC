@@ -1,0 +1,242 @@
+.genric-btn.danger-border:hover {
+  color: #fff;
+  background: #4bb5ce;
+  border: 1px solid transparent;
+}
+.home_bannner_area_margin {
+  margin-top: 0px !important;
+}
+.header_area {
+  margin-top: 10px;
+}
+.clip-path-kaus {
+  clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 79vh);
+}
+.clip-path-kaus-about {
+  clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 60vh);
+}
+
+.margin-top-neg-huge-kaus {
+  margin-top: -175px;
+}
+.form-control::placeholder {
+  background-color: #f9f9ff;
+  margin-left: 10px;
+  font-weight: 100;
+  color: #bebebb;
+  font-size: 12px;
+}
+.nav-link-kaus {
+  width: 250px;
+}
+.nav-item-bottom-less-kaus {
+  border-bottom: 0px solid #fff !important;
+  margin: 2px;
+}
+.kaus-color-white {
+  color: white !important;
+}
+@media only screen and (max-width: 600px) {
+  .kaus-color-white {
+    color: black !important;
+  }
+}
+.kaus-edit {
+  font-size: 26px;
+  font-weight: 400;
+}
+.kaus-align-items-center {
+  margin-top: 150px;
+}
+.kaus-heading-about {
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+  /*text-align: center;
+	padding-top: 200px;*/
+}
+.kaus-hover {
+}
+header.masthead {
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: white;
+  font-size: 18px;
+  blur: auto;
+  background-color: #0e1a35;
+  object-fit: cover;
+  object-position: center;
+
+  /*	clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 79vh);*/
+}
+
+header.masthead .header-content {
+  max-width: 500px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+header.masthead .header-content h1 {
+  font-size: 30px;
+}
+
+header.masthead .device-container {
+  max-width: 325px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 80px;
+}
+
+header.masthead .device-container .screen img {
+  border-radius: 3px;
+}
+
+@media (min-width: 992px) {
+  header.masthead {
+    height: 70vh;
+    min-height: 405px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  header.masthead .header-content {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  header.masthead .header-content h1 {
+    font-size: 50px;
+  }
+
+  header.masthead .device-container {
+    max-width: 325px;
+  }
+}
+.kaus-edit {
+  background-image: url("../img/back.jpg");
+  background-size: cover;
+}
+#projectintern {
+  background-image: url("../img/bg-image-2.jpg");
+  background-size: cover;
+}
+
+@media (min-width: 992px) {
+  .kaus-mission-heading-2 {
+    width: 100%;
+    margin-left: 0%;
+    text-align: justify;
+  }
+}
+.team_item .team_img::before {
+  /*border-radius: 50%;*/
+}
+.img-fluid {
+  border-radius: 50%;
+}
+.kaus-gallery-image {
+  width: 100%;
+  border-radius: 4px;
+}
+.kaus-mission {
+  text-align: justify;
+  font-size: 17px;
+  font-weight: 100;
+  margin-top: 24px;
+  border-left: 2px solid #767;
+  padding-left: 30px;
+  border-right: 2px solid #767;
+  padding-right: 30px;
+}
+.col-md-offset-2 {
+  margin-left: 16.66666667%;
+}
+.team_item {
+  position: relative;
+  text-align: center;
+}
+
+.team_item .team_img {
+  position: relative;
+}
+
+/*.team_item .team_img:before {
+  content: "";
+  background: rgba(245, 32, 75, 0.85);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}*/
+
+/*.team_item .team_img .hover {*/
+/*  position: absolute;*/
+/*  left: 0px;*/
+/*  width: 100%;*/
+/*  top: 50%;*/
+/*  -webkit-transform: translateY(-50%);*/
+/*  -ms-transform: translateY(-50%);*/
+/*  transform: translateY(-50%);*/
+/*  text-align: center;*/
+/*  opacity: 0;*/
+/*  -webkit-transition: all 300ms linear 0s;*/
+/*  -o-transition: all 300ms linear 0s;*/
+/*  transition: all 300ms linear 0s;*/
+/*}*/
+
+.team_item .team_img .hover a {
+  font-size: 14px;
+  color: #fff;
+  margin-right: 20px;
+  opacity: 0.3;
+}
+
+.team_item .team_img .hover a:last-child {
+  margin-right: 0px;
+}
+
+.team_item .team_img .hover a:hover {
+  opacity: 1;
+}
+
+.team_item .team_name {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.team_item .team_name h4 {
+  margin-bottom: 5px;
+  color: #222222;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.team_item .team_name p {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: #777777;
+  margin-bottom: 0px;
+}
+
+.team_item:hover .team_img:before {
+  opacity: 1;
+}
+
+.team_item:hover .team_img .hover {
+  opacity: 1;
+}
+
+.form-select .current {
+  color: #888;
+}
+.form-select .nice-select .list .option {
+  color: #888;
+}
