@@ -21,6 +21,22 @@
         <link rel="stylesheet" href="\assets/css/style.css">
         <link rel="stylesheet" href="\assets/css/responsive.css">
         <link rel="stylesheet" href="\assets/css/footer.css">
+        <style>
+          .table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table td:first-child {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+        </style>
     </head>
     <body>
         
@@ -212,68 +228,107 @@
               const startupInfoDiv = document.getElementById('startupInfo');
               data.forEach(item => {
                 const infoContainer = document.createElement('div');
-                infoContainer.classList.add('feature_item');
-                infoContainer.classList.add('border');
-                infoContainer.innerHTML = `
-                  <h4 class="text-center">Application Id: ${item._id}</h4>
-                  <p>1. What is the name of your company, please provide website url and other relevant links?: 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q1}</span></p>
-                  <p>2. Phone number(s) (Please include phone numbers of all co-founders) 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q2}</span></p>
-                  <p>3. Where do all the founders live now? Please tell us the name of the place where you plan to run the company from. 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q3}</span></p>
-                  <p>4. Please tell us the name of each of the founders, age, their background, and their role in this startup. Please include email id, linkedin url, twitter id, Facebook url and github url
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q4}</span></p>
-                  <p>5. Please include a 1-2 minute video introducing the founders.
- 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q5}</span></p>
-                  <p>6. How long have the founders known each other and in what capacity, e.g. friends, colleagues at past company, relative etc.? 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q6}</span></p>
-                  <p>7. Please tell us in brief the most impressive thing each founder has built or achieved (Other than this startup) 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q7}</span></p>
-                  <p>8. Do you have any employee or interns? As above, please mention their names, background, role, linkedin url, Facebook url, twitter id and github url. 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q8}</span></p>
-                  <p>9. Explain what you are making and the problem you are solving. 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q9}</span></p>
-                  <p>10. Please provide a link to your demo/MVP. If it is password protected, please mention the password. 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q10}</span></p>
-                  <p>11. Please tell us the story behind this initiative i.e. when did this idea occur to you and how did you go about exploring it?
- 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q11}</span></p>
-                  <p>12. Which stage are you currently in e.g. under development, alpha, beta etc. Have you launched yet? If yes, how many users do you have and what is the growth rate of the users? If not, how far away are you from launch?
- 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q12}</span></p>
-                  <p>13. Have you done any customer validation or do you know people who have the problem you are trying to solve? What alternatives do people use right now? How would this product or service make their lives easier?
- 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q13}</span></p>
-                  <p>14. Who are your competitors and who has the potential to become one? Who amongst them would pose the biggest challenge?
-
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q14}</span></p>
-                  <p>15. How is your product different from your competitors. What is it that you are doing different?
-
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q15}</span></p>
-                  <p>16. Please provide some numbers around the estimated size of the market. Tell us how you arrived at these numbers.
- 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q16}</span></p>
-                  <p>17. How do/will you make money? Give your best estimate about how much you plan to make in 1year. (We understand it is hard to predict, but we just need to understand your best estimate based on your experience so far)
- 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q17}</span></p>
-                  <p>18. Are there paying users of the product? If yes, please tell us how many and the growth rate. Also, who is the typical user e.g. age range, sex, education, employment category, nationality etc.
-
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q18}</span></p>
-                  <p>19. How do you reach or plan to reach your users? Please mention if you have done any marketing campaigns already.
- 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q19}</span></p>
-                  <p>20. Is your company already incorporated? Please provide the date, place and type (LLP/Pvt. Ltd.) of incorporation.
- 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q20}</span></p>
-                  <p>21. Please upload if you want to provide any other document/presentation. 
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q21}</span></p>
-                  <p>22. Were you referred by someone? If yes, please mention the name of the person and company you were referred by.
-
-                    <br/>Response : <span class="" style="font-weight: 800 !important;">${item.q22}</span></p>
-
-                `;
+                
+                infoContainer.innerHTML = `<table class="table">
+        <tbody>
+            <tr>
+                <th>Question</th>
+                <th>Response</th>
+            </tr>
+            <tr>
+                <td>Application Id</td>
+                <td>${item._id}</td>
+            </tr>
+            <tr>
+                <td>1. What is the name of your company, please provide website URL and other relevant links?</td>
+                <td><span style="font-weight: 800 !important;">${item.q1}</span></td>
+            </tr>
+            <tr>
+                <td>2. Phone number(s) (Please include phone numbers of all co-founders)</td>
+                <td><span style="font-weight: 800 !important;">${item.q2}</span></td>
+            </tr>
+            <tr>
+                <td>3. Where do all the founders live now? Please tell us the name of the place where you plan to run the company from.</td>
+                <td><span style="font-weight: 800 !important;">${item.q3}</span></td>
+            </tr>
+            <tr>
+                <td>4. Please tell us the name of each of the founders, age, their background, and their role in this startup. Please include email id, LinkedIn URL, Twitter id, Facebook URL, and GitHub URL.</td>
+                <td><span style="font-weight: 800 !important;">${item.q4}</span></td>
+            </tr>
+            <tr>
+                <td>5. Please include a 1-2 minute video introducing the founders.</td>
+                <td><span style="font-weight: 800 !important;">${item.q5}</span></td>
+            </tr>
+            <tr>
+                <td>6. How long have the founders known each other and in what capacity, e.g. friends, colleagues at past company, relative etc.?</td>
+                <td><span style="font-weight: 800 !important;">${item.q6}</span></td>
+            </tr>
+            <tr>
+                <td>7. Please tell us in brief the most impressive thing each founder has built or achieved (Other than this startup).</td>
+                <td><span style="font-weight: 800 !important;">${item.q7}</span></td>
+            </tr>
+            <tr>
+                <td>8. Do you have any employees or interns? If yes, please mention their names, background, role, LinkedIn URL, Facebook URL, Twitter ID, and GitHub URL.</td>
+                <td><span style="font-weight: 800 !important;">${item.q8}</span></td>
+            </tr>
+            <tr>
+                <td>9. Explain what you are making and the problem you are solving.</td>
+                <td><span style="font-weight: 800 !important;">${item.q9}</span></td>
+            </tr>
+            <tr>
+                <td>10. Please provide a link to your demo/MVP. If it is password protected, please mention the password.</td>
+                <td><span style="font-weight: 800 !important;">${item.q10}</span></td>
+            </tr>
+            <tr>
+                <td>11. Please tell us the story behind this initiative i.e. when did this idea occur to you and how did you go about exploring it?</td>
+                <td><span style="font-weight: 800 !important;">${item.q11}</span></td>
+            </tr>
+            <tr>
+                <td>12. Which stage are you currently in e.g. under development, alpha, beta etc. Have you launched yet? If yes, how many users do you have, and what is the growth rate of the users? If not, how far away are you from launch?</td>
+                <td><span style="font-weight: 800 !important;">${item.q12}</span></td>
+            </tr>
+            <tr>
+                <td>13. Have you done any customer validation or do you know people who have the problem you are trying to solve? What alternatives do people use right now? How would this product or service make their lives easier?</td>
+                <td><span style="font-weight: 800 !important;">${item.q13}</span></td>
+            </tr>
+            <tr>
+                <td>14. Who are your competitors and who has the potential to become one? Who amongst them would pose the biggest challenge?</td>
+                <td><span style="font-weight: 800 !important;">${item.q14}</span></td>
+            </tr>
+            <tr>
+                <td>15. How is your product different from your competitors? What is it that you are doing differently?</td>
+                <td><span style="font-weight: 800 !important;">${item.q15}</span></td>
+            </tr>
+            <tr>
+                <td>16. Please provide some numbers around the estimated size of the market. Tell us how you arrived at these numbers.</td>
+                <td><span style="font-weight: 800 !important;">${item.q16}</span></td>
+            </tr>
+            <tr>
+                <td>17. How do/will you make money? Give your best estimate about how much you plan to make in 1 year. (We understand it is hard to predict, but we just need to understand your best estimate based on your experience so far)</td>
+                <td><span style="font-weight: 800 !important;">${item.q17}</span></td>
+            </tr>
+            <tr>
+                <td>18. Are there paying users of the product? If yes, please tell us how many and the growth rate. Also, who is the typical user e.g. age range, sex, education, employment category, nationality etc.</td>
+                <td><span style="font-weight: 800 !important;">${item.q18}</span></td>
+            </tr>
+            <tr>
+                <td>19. How do you reach or plan to reach your users? Please mention if you have done any marketing campaigns already.</td>
+                <td><span style="font-weight: 800 !important;">${item.q19}</span></td>
+            </tr>
+            <tr>
+                <td>20. Is your company already incorporated? Please provide the date, place, and type (LLP/Pvt. Ltd.) of incorporation.</td>
+                <td><span style="font-weight: 800 !important;">${item.q20}</span></td>
+            </tr>
+            <tr>
+                <td>21. Please upload if you want to provide any other document/presentation.</td>
+                <td><span style="font-weight: 800 !important;">${item.q21}</span></td>
+            </tr>
+            <tr>
+                <td>22. Were you referred by someone? If yes, please mention the name of the person and company you were referred by.</td>
+                <td><span style="font-weight: 800 !important;">${item.q22}</span></td>
+            </tr>
+        </tbody>
+    </table>`
                 startupInfoDiv.appendChild(infoContainer);
               });
             })
