@@ -22,18 +22,177 @@
         <link rel="stylesheet" href="/assets/css/responsive.css">
         <link rel="stylesheet" href="/assets/css/footer.css">
         <style>
-            .aislogo{
-                max-height:70px;
+
+            .masthead{
+                max-height: 10vh !important;
             }
-            .aisfndr{
-                height:140px;
-                width:120px;
-                padding: 3px;
-                box-shadow: 2px 2px 12px #a1a1a199;
-                border-radius: 4px;
-            }
+
+            .product-card {
+      width: 340px;
+      position: relative;
+      box-shadow: 0 2px 7px #dfdfdf;
+      margin: 20px;
+      background: #c0d3f948;
+      display: inline-block;
+    }
+
+
+
+    /* Additional styles for the badge */
+
+    .product-tumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      background: #c0d3f948;
+    }
+
+    .product-tumb img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .product-tumb img:hover {
+      transform: scale(1.05);
+    }
+
+    .product-details {
+      padding: 20px;
+    }
+
+    .product-catagory {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .product-details h4 a {
+      font-weight: 500;
+      display: block;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      color: #000;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .product-details h4 a:hover {
+      color: #000;
+    }
+
+    .product-details p {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 10px;
+      color: #999;
+    }
+
+    .product-bottom-details {
+      overflow: hidden;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+
+    .product-bottom-details div {
+      float: left;
+      width: 50%;
+    }
+
+    .product-links {
+      text-align: right;
+    }
+
+    .product-links a {
+      display: inline-block;
+      margin-left: 5px;
+      color: #e1e1e1;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+
+    .product-links a:hover {
+      color: #fbb72c;
+    }
+    .container  .row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
         </style>
         <script>
+
+
+            const data = [
+    {
+        "Link": "http://www.first.com",
+        "Image": "/assets/img/1st.png",
+        "h4": "Identifying privacy risks due to contact tracing during COVID-19 and their mitigation",
+        "h5": "By - Dr. Debanjan Sadhya"
+    },
+    {
+        "Link": "http://www.second.co.in",
+        "Image": "\\assets\\img\\2nd.png",
+        "h4": "IOT Based Smart Device to Implement Gesture Keyboard in the Light of COVID-19 Disease",
+        "h5": "By- Dr. Gaurav Kaushal"
+    },
+    {
+        "Link": "http://www.fingpay.co.in",
+        "Image": "\\assets\\img\\3rd.png",
+        "h4": "Virtual Lab on Data Structure and Algorithms",
+        "h5": "By - Prof P K Singh"
+    },
+    {
+        "Image": "\\assets\\img\\4rth.png",
+        "h4": "Development of IOT Based Smart isolation/ Quarantine Center to combat COVID-19",
+        "h5": "By - Dr. Somesh Kumar"
+    },
+    {
+        "Image": "\\assets\\img\\5.png",
+        "h4": "SehatOne – Comprehensive Medical Analysis for Organizations",
+        "h5": "By - Mr. Ojaswa Sharma"
+    },
+    {
+        "Image": "\\assets\\img\\6.png",
+        "h4": "An AI-based System for Generating Structured Medical Information",
+        "h5": "By - Dr.Santosh Singh Rathore"
+    },
+    {
+        "Image": "\\assets\\img\\7.png",
+        "h4": "Accelerating Net Zero Economy Initiatives: Reflections for Moving Forward for Achieving the Decarbonizing India",
+        "h5": "By - Dr. Manoj Kumar Dash"
+    },
+    {
+        "Image": "\\assets\\img\\8.png",
+        "h4": "An IoT based Complete Sanitization System for the Dispensary of ABVIIITM, Gwalior",
+        "h5": "By - Dr. Arun Kumar"
+    },
+    {
+        "Image": "\\assets\\img\\9.png",
+        "h4": "Design of NextGen Hearing Aids",
+        "h5": "By - Dr.Vinal Patel"
+    },
+    {
+        "Image": "\\assets\\img\\10.png",
+        "h4": "Edenfield Pvt Ltd",
+        "h5": "By - Mr. Brajendra Sikarwar"
+    },
+    {
+        "Image": "\\assets\\img\\mahatejas.jpeg",
+        "h4": "Mahatejas Innovations Pvt Ltd",
+        "h5": "By - Mr. Anoop Singh"
+    },
+    {
+        "Image": "\\assets\\img\\live-leader.jpeg",
+        "h4": "Live Leaders",
+        "h5": "By - Mr. Rahul Bit"
+    }
+]
             /*01*/
             var first='/gallery/founder/debanjan.jpeg';
             var first2="/assets/img/1st.png";
@@ -202,6 +361,18 @@
                 </nav>
             </div>
         </header>
+        <header class="masthead">
+            <div class="container h-50">
+                
+                  <div class=" m-auto">
+                    <h1 class="mt-5">Tide 1 Start Ups</h1>
+                   
+                  </div>
+                
+            </div>
+          </header>
+
+        
         <!--================Header Menu Area =================-->
         
         <!--================Home Banner Area =================-->
@@ -250,18 +421,7 @@
         </section> -->
 
     
-    <header class="masthead">
-      <div class="container h-100">
-        <div class="row h-100">
-          <div class="col-lg-7 my-auto">
-            <div class="header-content mx-auto">
-              <h1 class="mb-5">Tide 2 Start Ups</h1>
-             
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    
       
             
             <!-- <div class="container">
@@ -275,176 +435,42 @@
                 </div>
             </div> -->
         
-         <section class="team_area p_120">
+         <section >
            
-                <h1 style="font-size: 40px; text-align: center;font-family: 'Merriweather', serif;color: #7d555d;font-weight: 100 ">Tide 2 Start-Ups</h1>
+                
                 <!-- <h2 style="font-size: 20px; text-align: center;color: #7d555d;margin-top: 20px;margin-bottom: 40px;font-weight: 100px;">TIIC board officials</h2> -->
 
-                <div class="d-flex kaus-align-items-center w-100 container">
-                    <div class="row team_inner">
-                        <div class="col-lg-3  p-2  col-sm-6">
-                            <div class="team_item" style="border-radius: 0px;">
-                                <div class="team_img">
-                                    <a href="http://www.first.com">
-                                    <img class="first" src="/assets/img/1st.png" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;"></a>
-                                    
-                                </div>
-                                <div class="team_name">
-                                    <h4>Identifying privacy risks due to contact tracing during COVID-19 and their mitigation</h4>
-                                    <h5>By - Dr. Debanjan Sadhya</h5>
-                                </div>
-                            </div>
-                        </div>
-                         <div class="col-lg-3  p-2  col-sm-6">
-                            <div class="team_item" style="border-radius: 0px;">
-                                <div class="team_img">
-                                    <a href="http://www.second.co.in">
-                                    <img class="second" src="\assets\img\2nd.png" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;"></a>
-                                </div>
-                                <div class="team_name">
-                                    <h4>IOT Based Smart Device to Implement Gesture Keyboard in the Light of COVID-19 Disease
-    
-                                    </h4>
-                                    <h5>By- Dr. Gaurav Kaushal</h5>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3  p-2  col-sm-6">
-                            <div class="team_item" style="border-radius: 0px;">
-                                <div class="team_img">
-                                   <a href="http://www.fingpay.co.in">
-                                    <img class="third" src="\assets\img\3rd.png" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;"></a>
-                                </div>
-                                <div class="team_name">
-                                    <h4>Virtual Lab on Data Structure and Algorithms
-                                    </h4>
-                                    <h5>By - Prof P K Singh </h5>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3  p-2  col-sm-6">
-                            <div class="team_item" style="border-radius: 0px;">
-                                <div class="team_img">
-                                    <img class="fourth" src="\assets\img\4rth.png" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                </div>
-                                <div class="team_name">
-                                    <h4>Development of IOT Based Smart isolation/ Quarantine Center to combat COVID-19</h4>
-                                    <h5>By - Dr. Somesh Kumar </h5>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3  p-2  col-sm-6">
-                            <div class="team_item" style="border-radius: 0px;">
-                                <div class="team_img">
-                                    <img class="fifth" src="\assets\img\5.png" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                </div>
-                                <div class="team_name">
-                                    <h4>SehatOne – Comprehensive Medical Analysis for Organizations
-                                    </h4>
-                                    <h5>By - Mr. Ojaswa Sharma </h5>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3  p-2  col-sm-6">
-                            <div class="team_item" style="border-radius: 0px;">
-                                <div class="team_img">
-                                    <img class="sixth" src="\assets\img\6.png" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                </div>
-                                <div class="team_name">
-                                    <h4>An AI-based System for Generating Structured Medical Information
-                                    </h4>
-                                    <h5>By - Dr.Santosh Singh Rathore </h5>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3  p-2  col-sm-6">
-                            <div class="team_item" style="border-radius: 0px;">
-                                <div class="team_img">
-                                    <img class="seventh" src="\assets\img\7.png" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                </div>
-                                <div class="team_name">
-                                    <h4>Accelerating Net Zero Economy Initiatives: Reflections for Moving Forward for Achieving the Decarbonizing India</h4>
-                                    <h5>By - Dr. Manoj Kumar Dash </h5>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3  p-2  col-sm-6">
-                            <div class="team_item" style="border-radius: 0px;">
-                                <div class="team_img">
-                                    <img class="eight" src="\assets\img\8.png" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                </div>
-                                <div class="team_name">
-                                    <h4>An IoT based Complete Sanitization System for the Dispensary of ABVIIITM, Gwalior
-                                    </h4>
-                                    <h5>By - Dr. Arun Kumar </h5>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3  p-2  col-sm-6">
-                            <div class="team_item" style="border-radius: 0px;">
-                                <div class="team_img">
-                                    <img class="ninth" src="\assets\img\9.png" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                </div>
-                                <div class="team_name">
-                                    <h4>Design of NextGen Hearing Aids</h4>
-                                    <h5>By - Dr.Vinal Patel </h5>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3  p-2  col-sm-6">
-                            <div class="team_item" style="border-radius: 0px;">
-                                <div class="team_img">
-                                    <img class="tenth" src="\assets\img\10.png" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                </div>
-                                <div class="team_name">
-                                    <h4>Edenfield Pvt Ltd
-                                    </h4>
-                                    <h5>By - Mr. Brajendra Sikarwar
-                                    </h5>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3  p-2  col-sm-6">
-                            <div class="team_item" style="border-radius: 0px;">
-                                <div class="team_img">
-                                    <img class="eleven" src="\assets\img\mahatejas.jpeg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                </div>
-                                <div class="team_name">
-                                    <h4>Mahatejas Innovations Pvt Ltd
-                                    </h4>
-                                    <h5>By - Mr. Anoop Singh </h5>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3  p-2  col-sm-6">
-                            <div class="team_item" style="border-radius: 0px;">
-                                <div class="team_img">
-                                    <img class="twelve" src="\assets\img\live-leader.jpeg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                </div>
-                                <div class="team_name">
-                                    <h4>Live Leaders
+                
 
-                                    </h4>
-                                    <h5>By - Mr. Rahul Bit
-
-                                    </h5>
-                                    
-                                </div>
+                <div class="container">
+                    <div class="row">
+                  
+                      <!-- JavaScript to dynamically generate product cards -->
+                      <script>
+                        
+                  
+                        data.forEach(item => {
+                          const productCard = document.createElement('div');
+                          productCard.className = 'col-lg-3 col-md-6 col-sm-12 product-card'; // Adjust the columns based on screen sizes
+                  
+                          const cardContent = `
+                            <div class="product-tumb">
+                              <img src="${item.Image}" alt="">
                             </div>
-                        </div>
+                            <div class="product-details">
+                              <h4><a href="${item.Link}">${item.h4}</a></h4>
+                              <p>${item.h5}</p>
+                              
+                            </div>
+                          `;
+                  
+                          productCard.innerHTML = cardContent;
+                          document.querySelector('.row').appendChild(productCard);
+                        });
+                      </script>
+                  
                     </div>
-                </div>
-            </div>
+                  </div>
         </section>
               
         <footer id="myFooter" style="margin-top: 40px;">
