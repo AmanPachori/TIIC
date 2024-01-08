@@ -22,18 +22,337 @@
         <link rel="stylesheet" href="/assets/css/responsive.css">
         <link rel="stylesheet" href="/assets/css/footer.css">
         <style>
-            .aislogo{
-                max-height:70px;
+
+            .masthead{
+                max-height: 10vh !important;
             }
-            .aisfndr{
-                height:140px;
-                width:120px;
-                padding: 3px;
-                box-shadow: 2px 2px 12px #a1a1a199;
-                border-radius: 4px;
-            }
+
+            .product-card {
+      width: 340px;
+      position: relative;
+      box-shadow: 0 2px 7px #dfdfdf;
+      margin: 20px;
+      background: #c0d3f948;
+      display: inline-block;
+    }
+
+
+
+    /* Additional styles for the badge */
+
+    .product-tumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      background: #c0d3f948;
+    }
+
+    .product-tumb img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .product-tumb img:hover {
+      transform: scale(1.1);
+    }
+
+    .product-details {
+      padding: 20px;
+    }
+
+    .product-catagory {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .product-details h4 a {
+      font-weight: 500;
+      display: block;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      color: #000;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .product-details h4 a:hover {
+      color: #000;
+    }
+
+    .product-details p {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 10px;
+      color: #999;
+    }
+
+    .product-bottom-details {
+      overflow: hidden;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+
+    .product-bottom-details div {
+      float: left;
+      width: 50%;
+    }
+
+    .product-links {
+      text-align: right;
+    }
+
+    .product-links a {
+      display: inline-block;
+      margin-left: 5px;
+      color: #e1e1e1;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+
+    .product-links a:hover {
+      color: #fbb72c;
+    }
+    .container  .row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
         </style>
         <script>
+
+            const gdata =[
+            {
+        "Link": "http://www.mechmocha.com",
+        "Image": "\\assets\\img\\mechmocha.jpg",
+        "h4": "MechMocha Game Studios",
+        "h5": "Casual mobile games development studio"
+    },
+    {
+        "Link": "http://www.decent.co.in",
+        "Image": "\\assets\\img\\decentsolutions.jpg",
+        "h4": "Decent Solutions",
+        "h5": "Professional web-design & development company"
+    },
+    {
+        "Link": "http://www.fingpay.co.in",
+        "Image": "\\assets\\img\\tapits.jpg",
+        "h4": "TAPITS Technologies Pvt Ltd",
+        "h5": "Biometric-based payment platform for merchants"
+    },
+    {
+        "Image": "\\assets\\img\\onlinekisanmandi.jpg",
+        "h4": "Online Kishan Mandi Pvt Ltd",
+        "h5": "online Agri-Market"
+    },
+    {
+        "Image": "\\assets\\img\\kkpattanaik.jpg",
+        "h4": "Head Gesture Controlled Wheel Chair for the disabled",
+        "h5": "By- Dr. K.K.Pattanaik"
+    },
+    {
+        "Image": "\\assets\\img\\wilfredgodfrey.jpg",
+        "h4": "Companion Device for fostering classroom interactivity",
+        "h5": "By- Dr. Wilfred Godfrey"
+    },
+    {
+        "Image": "\\assets\\img\\vinaysingh.jpg",
+        "h4": "Soil Health Management System",
+        "h5": "By- Dr. Vinay Singh"
+    },
+    {
+        "Link": "http://www.mechmocha.com",
+        "Image": "\\assets\\img\\mechmocha.jpg",
+        "h4": "MechMocha Game Studios",
+        "h5": "Casual mobile games development studio"
+    },
+    {
+        "Link": "http://www.decent.co.in",
+        "Image": "\\assets\\img\\decentsolutions.jpg",
+        "h4": "Decent Solutions",
+        "h5": "Professional web-design & development company"
+    },
+    {
+        "Image": "\\assets\\img\\pumpkinpot.jpg",
+        "h4": "PumpkinPot.com",
+        "h5": "Android application in health sectors"
+    },
+    {
+        "Image": "\\assets\\img\\spartaneliteconsulting.jpg",
+        "h4": "Spartan Elite Consulting",
+        "h5": "IT Product and services"
+    },
+    {
+        "Image": "\\assets\\img\\gwalior7.jpg",
+        "h4": "Gwalior7",
+        "h5": "E-Commerce platform which brings retail stores online"
+    },
+    {
+        "Image": "\\assets\\img\\jigyasa.jpg",
+        "h4": "Jigyasa",
+        "h5": "Android application for k-12 learning"
+    },
+    {
+        "Image": "\\assets\\img\\foodzamo.jpg",
+        "h4": "Food Zamo",
+        "h5": "Exclusive app for restaurants in Gwalior"
+    },
+    {
+        "Link": "http://www.i3technologies.in",
+        "Image": "\\assets\\img\\i3technologies.jpg",
+        "h4": "i3 Technologies",
+        "h5": "Offers smart and eco-friendly transport"
+    },
+    {
+        "Image": "\\assets\\img\\veggkart.jpg",
+        "h4": "VeggKart",
+        "h5": "Online platform to buy grocery and staples"
+    },
+    {
+        "Link": "http://www.truesaviour.com",
+        "Image": "\\assets\\img\\vaidik.JPG",
+        "h4": "Vaidik Technologies Pvt Ltd",
+        "h5": ""
+    }
+            ];
+            
+            const cdata = [
+    {
+        "Link": "http://www.friidi.com",
+        "Image": "\\assets\\img\\friidi.png",
+        "h4": "Friidi India Addtech Pvt. Ltd.",
+        "h5": "Addtech Startup in Gwalior"
+    },
+    {
+        "Link": "http://www.sqrfactor.com",
+        "Image": "\\assets\\img\\sqrfactor.jpg",
+        "h4": "Sqrfactor India Pvt. Ltd.",
+        "h5": "Network for architecture community"
+    },
+    {
+        "Link": "http://www.abhinavinfost.com",
+        "Image": "\\assets\\img\\abhinavi.png",
+        "h4": "Abhinav Infosoft Pvt. Ltd.",
+        "h5": "Website designing company in Gwalior"
+    },
+    {
+        "Link": "http://swisscotechno.blogspot.com/",
+        "Image": "\\assets\\img\\swissco.JPG",
+        "h4": "Swissco Techno Inc",
+        "h5": ""
+    },
+    {
+        "Link": "http://www.oyeorder.com",
+        "Image": "\\assets\\img\\oyeorder.jpg",
+        "h4": "Oye Order E-Commerce Pvt Ltd",
+        "h5": "online food delivery in Gwalior"
+    },
+    {
+        "Link": "http://www.fingpay.co.in",
+        "Image": "\\assets\\img\\tapits.jpg",
+        "h4": "TAPITS Technologies Pvt Ltd",
+        "h5": "Biometric-based payment platform for merchants"
+    },
+    {
+        "Image": "\\assets\\img\\onlinekisanmandi.jpg",
+        "h4": "Online Kishan Mandi Pvt Ltd",
+        "h5": "online Agri-Market"
+    },
+    {
+        "Link": "http://www.kriscoagrotech.com",
+        "Image": "\\assets\\img\\kriscoagrotech.jpg",
+        "h4": "Krisco Agrotech Pvt Ltd",
+        "h5": "Smart Bio Chair"
+    },
+    {
+        "Image": "\\assets\\img\\nainpurhydropower.jpg",
+        "h4": "Nainpur Hydropower India Pvt Ltd",
+        "h5": "Smart irrigation system"
+    }
+]
+            const sdata = [
+    {
+        "Link": "http://www.mechmocha.com",
+        "Image": "\\assets\\img\\mechmocha.jpg",
+        "h4": "MechMocha Game Studios",
+        "h5": "Casual mobile games development studio"
+    },
+    {
+        "Link": "http://www.decent.co.in",
+        "Image": "\\assets\\img\\decentsolutions.jpg",
+        "h4": "Decent Solutions",
+        "h5": "Professional web-design & development company"
+    },
+    {
+        "Image": "\\assets\\img\\pumpkinpot.jpg",
+        "h4": "PumpkinPot.com",
+        "h5": "Android application in health sectors"
+    },
+    {
+        "Image": "\\assets\\img\\spartaneliteconsulting.jpg",
+        "h4": "Spartan Elite Consulting",
+        "h5": "IT Product and services"
+    },
+    {
+        "Image": "\\assets\\img\\gwalior7.jpg",
+        "h4": "Gwalior7",
+        "h5": "E-Commerce platform which brings retail stores online"
+    },
+    {
+        "Image": "\\assets\\img\\jigyasa.jpg",
+        "h4": "Jigyasa",
+        "h5": "Android application for k-12 learning"
+    },
+    {
+        "Image": "\\assets\\img\\foodzamo.jpg",
+        "h4": "Food Zamo",
+        "h5": "Exclusive app for restaurants in Gwalior"
+    },
+    {
+        "Link": "http://www.i3technologies.in",
+        "Image": "\\assets\\img\\i3technologies.jpg",
+        "h4": "i3 Technologies",
+        "h5": "Offers smart and eco-friendly transport"
+    },
+    {
+        "Image": "\\assets\\img\\veggkart.jpg",
+        "h4": "VeggKart",
+        "h5": "Online platform to buy grocery and staples"
+    },
+    {
+        "Link": "http://www.truesaviour.com",
+        "Image": "\\assets\\img\\vaidik.JPG",
+        "h4": "Vaidik Technologies Pvt Ltd",
+        "h5": ""
+    }
+]
+            const fdata = [
+    {
+        "h4": "Head Gesture Controlled Wheel Chair for the disabled",
+        "h5": "Dr. K.K.Pattanaik",
+        "Image": "\\assets\\img\\kkpattanaik.jpg",
+        "socialLinks": ["Facebook", "Twitter", "LinkedIn"]
+    },
+    {
+        "h4": "Companion Device for fostering classroom interactivity",
+        "h5": "Dr. Wilfred Godfrey",
+        "Image": "\\assets\\img\\wilfredgodfrey.jpg",
+        "socialLinks": ["Facebook", "Twitter", "LinkedIn"]
+    },
+    {
+        "h4": "Soil Health Management System",
+        "h5": "Dr. Vinay Singh",
+        "Image": "\\assets\\img\\vinaysingh.jpg",
+        "socialLinks": ["Facebook", "Twitter", "LinkedIn"]
+    }
+]
+            
             /*01*/
             var mechmocha='/gallery/founder/Arpitamohit_mechmocha.jpg';
             var mechmocha2="/assets/img/mechmocha.jpg";
@@ -324,14 +643,10 @@
     
     <header class="masthead">
       <div class="container h-100">
-        <div class="row h-100">
-          <div class="col-lg-7 my-auto">
             <div class="header-content mx-auto">
-              <h1 class="mb-5">Tide 1 Start Ups</h1>
+              <h1 class="mt-5">Tide 1 Start Ups</h1>
              
             </div>
-          </div>
-        </div>
       </div>
     </header>
       
@@ -349,520 +664,136 @@
         
          <section class="team_area p_120">
            
-                <h1 style="font-size: 40px; text-align: center;font-family: 'Merriweather', serif;color: #7d555d;font-weight: 100 ">Graduated Start-Ups</h1>
+                <h1 style="font-size: 40px; text-align: center;font-family: 'Merriweather', serif;color: #7d555d;font-weight: 100 mb-5 ">Graduated Start-Ups</h1>
                 <!-- <h2 style="font-size: 20px; text-align: center;color: #7d555d;margin-top: 20px;margin-bottom: 40px;font-weight: 100px;">TIIC board officials</h2> -->
+                <div class="container">
+                    <div class="row">
+                  
+                      <!-- JavaScript to dynamically generate product cards -->
+                      <script>
+                        
+                  
+                        gdata.forEach(item => {
+                          const productCard = document.createElement('div');
+                          productCard.className = 'col-lg-3 col-md-6 col-sm-12 product-card'; // Adjust the columns based on screen sizes
+                  
+                          const cardContent = `
+                            <div class="product-tumb">
+                              <img src="${item.Image}" alt="">
+                            </div>
+                            <div class="product-details">
+                              
+                              <h4><a href="${item.Link}">${item.h4}</a></h4>
+                              <p>${item.h5}</p>
+                              
+                            </div>
+                          `;
+                  
+                          productCard.innerHTML = cardContent;
+                          document.querySelector('.row').appendChild(productCard);
+                        });
+                      </script>
+                  
+                    </div>
+                  </div>
+                  
+                
+                <h1 style="font-size: 40px; text-align: center;font-family: 'Merriweather', serif;color: #7d555d;font-weight: 100 mb-5">Students Start-Ups</h1>
 
-                <div class="row team_inner">
-                    <div class="col-lg-2 col-sm-6">
+                <div class="container">
+                    <div class="row row1">
+                  
+                      <!-- JavaScript to dynamically generate product cards -->
+                      <script>
+                        
+                  
+                        sdata.forEach(item => {
+                          const productCard = document.createElement('div');
+                          productCard.className = 'col-lg-3 col-md-6 col-sm-12 product-card'; // Adjust the columns based on screen sizes
+                  
+                          const cardContent = `
+                            <div class="product-tumb">
+                              <img src="${item.Image}" alt="">
+                            </div>
+                            <div class="product-details">
+                              
+                              <h4><a href="${item.Link}">${item.h4}</a></h4>
+                              <p>${item.h5}</p>
+                              
+                            </div>
+                          `;
+                  
+                          productCard.innerHTML = cardContent;
+                          document.querySelector('.row1').appendChild(productCard);
+                        });
+                      </script>
+                  
                     </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img">
-                                <a href="http://www.mechmocha.com">
-                                <img class="mechmocha" src="\assets\img\mechmocha.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;"></a>
-                                
+                  </div>
+                
+                <h1 style="font-size: 40px; text-align: center;font-family: 'Merriweather', serif;color: #7d555d;font-weight: 100 mb-5 ">Company Start-Ups</h1>
+                <div class="container">
+                    <div class="row row2">
+                  
+                      <!-- JavaScript to dynamically generate product cards -->
+                      <script>
+                        
+                  
+                        cdata.forEach(item => {
+                          const productCard = document.createElement('div');
+                          productCard.className = 'col-lg-3 col-md-6 col-sm-12 product-card'; // Adjust the columns based on screen sizes
+                  
+                          const cardContent = `
+                            <div class="product-tumb">
+                              <img src="${item.Image}" alt="">
                             </div>
-                            <div class="team_name">
-                                <h4>MechMocha Game Studios</h4>
-                                <h5>Casual mobile games development studio</h5>
+                            <div class="product-details">
+                              
+                              <h4><a href="${item.Link}">${item.h4}</a></h4>
+                              <p>${item.h5}</p>
+                              
                             </div>
-                        </div>
+                          `;
+                  
+                          productCard.innerHTML = cardContent;
+                          document.querySelector('.row2').appendChild(productCard);
+                        });
+                      </script>
+                  
                     </div>
-                     <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img">
-                                <a href="http://www.decent.co.in">
-                                <img class="decent" src="\assets\img\decentsolutions.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;"></a>
-                            </div>
-                            <div class="team_name">
-                                <h4>Decent Solutions</h4>
-                                <h5>Professional web-design & development company</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img">
-                               <a href="http://www.fingpay.co.in">
-                                <img class="tapits" src="\assets\img\tapits.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;"></a>
-                            </div>
-                            <div class="team_name">
-                                <h4>TAPITS Technologies Pvt Ltd</h4>
-                                <h5>Biometric-based payment platform for merchants</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img">
-                                <img class="kisanmandi" src="\assets\img\onlinekisanmandi.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                            </div>
-                            <div class="team_name">
-                                <h4>Online Kishan Mandi Pvt Ltd</h4>
-                                <h5>online Agri-Market</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row team_inner">
-                    <div class="col-lg-3 col-sm-6">
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img">
-                                <img class="chair" src="\assets\img\kkpattanaik.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                            </div>
-                            <div class="team_name">
-                                <h4>Head Gesture Controlled Wheel Chair for the disabled</h4>
-                                <h5>By- Dr. K.K.Pattanaik</h5>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img">
-                                <img class="classroom" src="\assets\img\wilfredgodfrey.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                            </div>
-                            <div class="team_name">
-                                <h4>Companion Device for fostering classroom interactivity</h4>
-                                <h5>By- Dr. Wilfred Godfrey</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img">
-                               <img class="soil" src="\assets\img\vinaysingh.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                            </div>
-                            <div class="team_name">
-                                <h4>Soil Health Management System</h4>
-                                <h5>By- Dr. Vinay Singh</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h1 style="font-size: 40px; text-align: center;font-family: 'Merriweather', serif;color: #7d555d;font-weight: 100 ">Students Start-Ups</h1>
-                <div class="row team_inner">
-                    <div class="col-lg-1"></div>
-                   <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <a href="http://www.mechmocha.com">
-                                <img class="mechmocha" src="\assets\img\mechmocha.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>MechMocha Game Studios</h4>
-                                <h5>Casual mobile games development studio</h5>
-                                <!-- <p>Director, ABV-IIITM Gwalior. </p> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <a href="http://www.decent.co.in">
-                                <img class="decent" src="\assets\img\decentsolutions.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Decent Solutions</h4>
-                                <h5>Professional web-design & development company</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <img class="pumpkin" src="\assets\img\pumpkinpot.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>PumpkinPot.com</h4>
-                                <h5>Android application in health sectors</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <img class="spartan" src="\assets\img\spartaneliteconsulting.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Spartan Elite Consulting</h4>
-                                <h5>IT Product and services</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <img class="gwalior7" src="\assets\img\gwalior7.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Gwalior7</h4>
-                                <h5>E-Commerce platform which brings retail stores online</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <img class="jigyasa" src="\assets\img\jigyasa.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Jigyasa</h4>
-                                <h5>Android application for k-12 learning</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <img class="foodzamo" src="\assets\img\foodzamo.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Food Zamo</h4>
-                                <h5>Exclusive app for restaurants in Gwalior</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <a href="http://www.i3technologies.in">
-                                <img class="i3tech" src="\assets\img\i3technologies.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;"></a>
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>i3 Technologies</h4>
-                                <h5>Offers smart and eco-friendly transport</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <img class="veggkart" src="\assets\img\veggkart.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>VeggKart</h4>
-                                <h5>Online platform to buy grocery and staples</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                               <a href="http://www.truesaviour.com">
-                                <img class="vaidik" src="\assets\img\vaidik.JPG" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Vaidik Technologies Pvt Ltd</h4>
-                                <h5></h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                </div> 
-                <h1 style="font-size: 40px; text-align: center;font-family: 'Merriweather', serif;color: #7d555d;font-weight: 100 ">Company Start-Ups</h1>
-                 <div class="row team_inner">
-                    <div class="col-lg-1">  </div>
-                   <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                               <a href="http://www.oyeorder.com">
-                                <img class="oyeorder" src="\assets\img\oyeorder.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;"></a>
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Oye Order E-Commerce Pvt Ltd</h4>
-                                <h5>online food delivery in Gwalior</h5>
-                                <!-- <p>Director, ABV-IIITM Gwalior. </p> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                              <a href="http://www.fingpay.co.in">
-                               <img class="tapits" src="\assets\img\tapits.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;"></a>
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>TAPITS Technologies Pvt Ltd</h4>
-                                <h5>Biometric-based payment platform for merchants</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <img class="kisanmandi" src="\assets\img\onlinekisanmandi.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Online Kishan Mandi Pvt Ltd</h4>
-                                <h5>online Agri-Market</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                               <a href="http://www.kriscoagrotech.com">
-                                <img class="krisco" src="\assets\img\kriscoagrotech.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;"></a>
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Krisco Agrotech Pvt Ltd</h4>
-                                <h5>Smart Bio Chair</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
+                  </div>
 
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <img class="nainpur" src="\assets\img\nainpurhydropower.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4> Nainpur Hydropower India Pvt Ltd</h4>
-                                <h5>Smart irrigation system</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                                        <div class="col-lg-1">  </div>
-                                        </div>
-                                        <div class="row team_inner">
-                    <div class="col-lg-1">  </div>
-
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                 <a href="http://www.friidi.com">
-                                <img class="friidi" src="\assets\img\friidi.png" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%; height:100px;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Friidi India Addtech Pvt. Ltd.</h4>
-                                <h5>Addtech Startup in Gwalior</h5>
-                                <!-- <p>Director, ABV-IIITM Gwalior. </p> -->
-                            </div>
-                        </div>
-                    </div>
-                 <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <a href="http://www.sqrfactor.com">
-                                <img class="sqrfactor" src="\assets\img\sqrfactor.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;  height:100px;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Sqrfactor India Pvt. Ltd.</h4>
-                                <h5>Network for architecture community</h5>
-                                <!-- <p>Director, ABV-IIITM Gwalior. </p> -->
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                 <a href="http://www.abhinavinfost.com">
-                                <img class="abhinav" src="\assets\img\abhinavi.png" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;  height:100px;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Abhinav Infosoft Pvt. Ltd.</h4>
-                                <h5>Website designing company in Gwalior</h5>
-                                <!-- <p>Director, ABV-IIITM Gwalior. </p> -->
-                            </div>
-                        </div>
-                    </div>
+               <h1 style="font-size: 40px; text-align: center;font-family: 'Merriweather', serif;color: #7d555d;font-weight: 100 mb-5 ">Faculty Start-Ups</h1>
+               <div class="container">
+                <div class="row row3">
+              
+                  <!-- JavaScript to dynamically generate product cards -->
+                  <script>
                     
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <a href="http://swisscotechno.blogspot.com/">
-                                <img class="swissco" src="\assets\img\swissco.JPG" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;  height:100px;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Swissco Techno Inc</h4>
-                                <h5></h5>
-                                <!-- <p>Director, ABV-IIITM Gwalior. </p> -->
-                            </div>
+              
+                    fdata.forEach(item => {
+                      const productCard = document.createElement('div');
+                      productCard.className = 'col-lg-3 col-md-6 col-sm-12 product-card'; // Adjust the columns based on screen sizes
+              
+                      const cardContent = `
+                        <div class="product-tumb">
+                          <img src="${item.Image}" alt="">
                         </div>
-                    </div>
+                        <div class="product-details">
+                          
+                          <h4><a href="${item.Link}">${item.h4}</a></h4>
+                          <p>${item.h5}</p>
+                          
+                        </div>
+                      `;
+              
+                      productCard.innerHTML = cardContent;
+                      document.querySelector('.row3').appendChild(productCard);
+                    });
+                  </script>
+              
                 </div>
-
-               <h1 style="font-size: 40px; text-align: center;font-family: 'Merriweather', serif;color: #7d555d;font-weight: 100 ">Faculty Start-Ups</h1>
-                <div class="row team_inner">
-                    <div class="col-lg-1"></div>
-                   <div class="col-lg-2 col-sm-4">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <img class="chair" src="\assets\img\kkpattanaik.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Head Gesture Controlled Wheel Chair for the disabled</h4>
-                                <h5>By- Dr. K.K.Pattanaik</h5>
-                                <!-- <p>Director, ABV-IIITM Gwalior. </p> -->
-                            </div>
-                        </div>
-                       
-                    </div> <div class="col-lg-2"></div>
-                    <div class="col-lg-2 col-sm-4">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <img class="classroom" src="\assets\img\wilfredgodfrey.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Companion Device for fostering classroom interactivity</h4>
-                                <h5>By- Dr. Wilfred Godfrey</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-2 col-sm-4">
-                        <div class="team_item" style="border-radius: 0px;">
-                            <div class="team_img" style="padding: 20px;">
-                                <img class="soil" src="\assets\img\vinaysingh.jpg" alt="" onmouseover="meraHover(this.className)" onmouseout="meraHoverOut(this.className)" style="width: 100%;">
-                                <div class="hover">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="team_name">
-                                <h4>Soil Health Management System</h4>
-                                <h5>By- Dr. Vinay Singh</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-               
-                </div>
-                ?>
+              </div>
             </div>
         </section>
               
