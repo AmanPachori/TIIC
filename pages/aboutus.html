@@ -77,6 +77,22 @@
   border-radius: 30;
 }
 
+.events {
+  padding: 20px 63px 20px 65px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
+}
+.eventsmain{
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px;
+} 
+.eventsmain:hover{
+  transform: scale(1.05);
+  transition: ease-in-out 300ms;
+}
+
 /* Dropdown content (hidden by default) */
 .dropdown-content {
     margin-top: 20px;
@@ -111,6 +127,64 @@
     transform: translateY(0);
   }
 }
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+.slider::before, .slider::after {
+ 
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide img {
+  height: 300px;
+  width: 280px;
+}
+.slide{
+    margin-right: 20px;
+}
+
 
 /* Style for headings and paragraphs inside dropdown */
 .dropdown-content h2 {
@@ -245,46 +319,7 @@
             </div>
             
 
-            <div class="container" style="margin-top: 40px;">
-                <div class="row feature_inner">
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="feature_item">
-                            <h4><i class="lnr lnr-user"></i>Expert Technicians</h4>
-                            <p>Promote interaction with, and resourcing Technology/Expertise from the faculty members and students in the Institute. </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="feature_item">
-                            <h4><i class="lnr lnr-license"></i>Professional Service</h4>
-                            <p>Incubate novel technology and business ideas into viable commercial products or services. </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="feature_item">
-                            <h4><i class="lnr lnr-phone"></i>Great Support</h4>
-                            <p>Organizing competitions to promote technological creativity and innovation among students.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="feature_item">
-                            <h4><i class="lnr lnr-rocket"></i>Technical Skills</h4>
-                            <p>Extending incubation support through knowledge inputs from college faculty and alumni, and also through provision of functional space for student-led start-ups.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="feature_item">
-                            <h4><i class="lnr lnr-diamond"></i>Highly Recomended</h4>
-                            <p>Partnering with reputed entrepreneurship promotion bodies, organizations, societies in order to have our students benefit from their inputs. </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="feature_item">
-                            <h4><i class="lnr lnr-bubble"></i>Positive Reviews</h4>
-                            <p>TIIC have received positive reviews and support of various students and entrepreneurs.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+       
         </section>
          <section class="team_area p_120">
             <div class="container" id="team">
@@ -443,20 +478,20 @@
                     <p style="font-size: 16px; color: #7d555d;font-weight: 100 ">Through a dedicated process of incubation and mentoring, the TIIC facilitates the conversion of technology into a commercially viable product. The main facilities provided by it are: </p>
                 </div>
                 <div class="row feature_inner">
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="feature_item">
+                    <div class="col-lg-12 col-sm-12">
+                        <div class="events eventsmain">
                             <h4><i class="lnr lnr-user"></i>Research and Training </h4>
                             <p>The Focus is on cutting edge research on innovation, technology development, management, entrepreneurship and competency building. Activities in this area include agenda based research programmes, partnership with the other leading national/international researchers.</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="feature_item">
+                    <div class="col-lg-12 col-sm-12">
+                        <div class=" events eventsmain">
                             <h4><i class="lnr lnr-license"></i>Workshops and Symposia</h4>
                             <p>Focused and specialized training sessions, workshops including those in the emerging areas is being organized by TIIC to assist innovators and entrepreneurs. There are also targeted programmes aimed at impartiong knowledge on innovation and entrepreneurship amongst government officials, innovators, researchers and students. </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="feature_item">
+                    <div class="col-lg-12 col-sm-12">
+                        <div class="events eventsmain">
                             <h4><i class="lnr lnr-phone"></i>Consultancy</h4>
                             <p>TIIC provides consultancy relating to IT enabled, science driven technology innovation and enterprise development. TIIC’s another agenda is to organize several clinics for scientists, researchers, innovators and entrepreneurs within India and abroad. The objective of these clinics will be to help innovators in their commercialization process and to link them with TIIC’s technology network. </p>
                         </div>
@@ -471,138 +506,107 @@
                     <h2 style="font-size: 40px; text-align: center;font-family: 'Merriweather', serif;font-weight: 100 "> Gallery</h2>
                    
                 </div>
-                <div class="row feature_inner">
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\office2.jpg" class="kaus-gallery-image" >
+
+                    <div class="slider">
+                        <div  class="slide-track">
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\office2.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off2.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off3.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off4.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off5.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off6.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off7.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off8.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off9.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off10.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off11.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off12.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off13.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off14.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off15.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off16.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off17.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off18.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="">
+                                    <img src="\assets\img\examples\off19.jpg" class="kaus-gallery-image" >
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off1.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off2.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off3.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off4.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off5.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off6.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off6.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off8.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off9.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off10.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off11.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off12.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off13.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off14.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off15.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off16.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\off17.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                    
-                    
-                     <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\office4.jpg" class="kaus-gallery-image">
-                        </div>
-                    </div>
-                     <div class="col-lg-4 col-sm-4">
-                        <div class="feature_item" style="padding: 3px;box-shadow: 2px 2px 12px #a1a1a199; border-radius: 4px;">
-                            <img src="\assets\img\examples\office3.jpg" class="kaus-gallery-image" >
-                        </div>
-                    </div>
-                   
-                </div>
+              
             </div>
         </section>
 

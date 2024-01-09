@@ -39,6 +39,67 @@
             }
  
 
+            h1{
+              color: #0e1a35;
+            }
+
+            @-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 200px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+.slider::before, .slider::after {
+  
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide img {
+  height: 200px;
+  width: 200px;
+}
+.slide{
+    margin-right: 20px;
+}
+
             .typewriter h1 {
   color: #0e1a35;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -268,6 +329,28 @@
                   <!--  <a href="<?php echo base_url('index.php/apply/intern'); ?>" class="genric-btn danger-border circle arrow"> <b>apply for Android App Development Workshop (Click here)</b><span class="lnr lnr-arrow-right"></span></a> -->
 
                     <br><br>
+                    <h1 class="w-full  text-center"> Institutional Associations
+                    </h1>
+                    <div class="slider">
+                      <div class="slide-track">
+                        <div class="slide">
+                          <img  src="/assets\img\amity.jpg" alt=""  style="width: 100%;">
+                        </div>
+                        <div class="slide">
+                          <img  src="/assets\img\prakashit.jpg" alt=""  style="width: 100%;">
+                        </div>
+                        <div class="slide">
+                          <img  src="/assets\img\softbiz.jpg" alt=""  style="width: 100%;">
+                        </div>
+                        <div class="slide">
+                          <img  src="/assets\img\sidh.jpg" alt=""  style="width: 100%;">
+                        </div>
+                        <div class="slide">
+                          <img  src="/assets\img\oni.jpg" alt=""  style="width: 100%;">
+                        </div>
+                      </div>
+                    </div>
+                    <br><br>
                     <div class="row">
                         <h3 class="mb-3" style="color:#0e1a35">TIIC Startups Views.....</h3>
                     </div>
@@ -329,6 +412,8 @@
         <div class="footer-copyright">
             <p>© 2023 - Technology Innovation and Incubation Centre</p>
         </div>
+
+        
     </footer>
         <!--================End Home Banner Area =================-->
         

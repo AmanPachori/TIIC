@@ -28,9 +28,117 @@
             font-weight: bold;
             font-size: 24px;
             padding-top: 30px;
-            border: 1px solid #ff0000;
+            border: 1px solid rgb(255, 255, 233);
             text-align: center;
         }
+        /* CSS styles for the card layout */
+/* Please ensure the appropriate path for the images */
+
+
+
+.events {
+  padding: 20px 63px 20px 65px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
+}
+
+.card {
+  overflow: hidden;
+  width: 90%;
+  height: 30vw;
+  margin: 5%;
+  float: left;
+  display: block;
+  position: relative;
+  background-color: #fff;
+  transition: box-shadow 300ms ease-in;
+}
+
+@media screen and (max-width: 750px) {
+    .card{
+        height: 55vh;
+    }
+}
+
+.card:hover {
+  box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+.img--container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.img--container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card--text {
+  bottom: -50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  transition: all 450ms cubic-bezier(0.6, 0.06, 0.34, 0.61);
+}
+
+.card--text.is-clicked,
+.card:hover .card--text {
+  bottom: 0%;
+}
+
+.text--container {
+  padding: 30px;
+}
+
+.text--title {
+  font-size: 1.15em;
+  margin-bottom: 0.75em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.text--details:before {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 1px;
+  background-color: #ddd;
+  margin: 30px 0;
+}
+
+.text--description {
+  line-height: 1.4em;
+}
+
+.text--link {
+  text-decoration: none;
+  margin-top: 1em;
+  display: inline-block;
+  color: #a52a2a;
+}
+
+.text--link:hover {
+  color: lighten(#a52a5a, 20%);
+}
+
+.eventsmain{
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px;
+} 
+.eventsmain:hover{
+  transform: scale(1.05);
+  transition: ease-in-out 300ms;
+}
+
     </style>
     </head>
     <body>
@@ -82,13 +190,14 @@
             </div>
             <div class="row feature_inner">
                 <div class="col-lg-6 col-sm-12 h-100 ">
-                    <div class="feature_item">
+                    <div class="events eventsmain ">
                         <p>Technology Innovation and Incubation Centre, ABV-IIITM, Gwalior has organized two days national conference on <span class="" style="font-weight: 800 !important;">“Innovation and Entrepreneurship”</span> on February 27-28, 2021. The event has provided a great platform to the researchers to interact under one umbrella for further development of efficient and secure information processing technologies. Efficient and secure data sensing, storage, and processing play pivotal roles in current information age. Total 286 participants have been participated in this online conference and 16 area experts have delivered the talk. 
                         </p>
                     </div>
                 </div>
+                
                 <div class="col-lg-6 col-sm-12 h-100 ">
-                    <div class="feature_item">
+                    <div class="events eventsmain ">
                         <p>Technology Innovation and Incubation Centre (TIIC) at Atal Bihari Vajpayee-Indian          Institute of Information Technology and Management, Gwalior has successfully organized       the National level Business Plan Competition <span class="" style="font-weight: 800 !important;">“VICHAT HAAT”</span>
                              on April 25, 2021. This     Vichaar Haat, was the flagship Business-Plan competition of ABV-IIITM Gwalior in association with the Ministry of Electronics & Information Technology, Government of            India. This competition has served as one of the finest platforms for all the budding             entrepreneurs to showcase & get their ideas validated by some of the best &         experienced industry experts
                         </p>
@@ -102,159 +211,204 @@
             <div class="kaus-mission-heading-2 mb-3">
                 <h2 style="font-weight: 200;font-size:40px;color: #111;text-align:center" >Workshop Under TIIC</h2>
             </div>
-            <h2 class="mb-3" style="font-weight: 200;font-size:24px;color: #111;text-align:center" >In 2022</h2>
-            <div class="row feature_inner">
-                <div class="col-lg-6 col-sm-12 h-100 ">
-                    <div class="feature_item">
-                        <img src="/assets/img/pic1.jpg" class="rounded mb-2" height=200 width=400/>
-                        <p><span class="" style="font-weight: 800 !important;">Workshop on Enterprise Healthcare Systems & Solutions  (Online mode)
-                        </span></p>
-                        <p><span class="" style="font-weight: 800 !important;">Date - </span>15th -19th January 2022</p>
-                        <p><span class="" style="font-weight: 800 !important;">Venue - </span>Technology Innovation and Incubation Centre ABV- IIITM Gwalior</p>
-                        <br/>
-                        <p>The Enterprise Health System & Solution (EHSS) comprises of Market Development, Operations, Medical Data Acquisition, Electronic Health Record Generation and Health Care Management. EHSS gives health plan customers access to key partners in the market. The EHSS Platform applications and tools offer capabilities such as managing Electronic Health Record from medical data acquisition through enrolment and provides data security and clinical decision support. The workshop will provide sessions, discussion and presentation on future research directions
-                        </p>
+            <div>
+                <h2 class="mb-3" style="font-weight: 200;font-size:24px;color: #111;text-align:center" >In 2022</h2>
+            <ul class="container events">
+                <li class="card">
+                    <div class="img--container">
+                      <img src="/assets/img/pic1.jpg" alt="Workshop on Enterprise Healthcare Systems & Solutions">
                     </div>
-                </div>
-                <div class="col-lg-6 col-sm-12 h-100 ">
-                    <div class="feature_item">
-                        <img src="/assets/img/Pic2.png" class="rounded mb-2" height=200 width=400/>
-                        <p><span class="" style="font-weight: 800 !important;">Innovation in Design and Development of Hybrid Antennas for 5G Communication (Online mode)
-                        </span></p>
-                        <p><span class="" style="font-weight: 800 !important;">Date - </span>15th -19th January 2022</p>
-                        <p><span class="" style="font-weight: 800 !important;">Venue - </span>Technology Innovation and Incubation Centre ABV- IIITM Gwalior</p>
-                        <br/>
-                        <p>This FDP aims at providing strong theoretical and practical experience in the field of 5G Communication. In 5G Hybrid Antenna Design; leaders in the field describe state-of-the-art research in applying the latest methodologies in the context of tomorrow’s most important 5G applications, ranging from next-generation cellular telephony and personal communication
-                            services,. Representatives of industries and academia have started to look into the echnological developments toward the next generation (5G), as the rollout of 4G mobile communication networks take place. mm wave communication, Software Defined Radio, HetNets, algorithms and architectures have an increasing important role to play in meeting the central challenges
-                            faced in the design of advanced wireless communication systems. 
-                        </p>
+                    <div class="card--text">
+                      <div class="text--container">
+                        <div class="text--header">
+                          <h2 class="text--title">Workshop on Enterprise Healthcare Systems & Solutions (Online mode)</h2>
+                          <p class="text--subtitle">15th -19th January 2022</p>
+                        </div>
+                        <div class="text--details">
+                          <p class="text--description">The Enterprise Health System & Solution (EHSS) comprises of Market Development, Operations, Medical Data Acquisition, Electronic Health Record Generation and Health Care Management...</p>
+                            
+                        </div>
+                      </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-sm-12 h-100 ">
-                    <div class="feature_item">
-                        <img src="/assets/img/pic3.jpg" class="rounded mb-2" height=200 width=400/>
-                        <p><span class="" style="font-weight: 800 !important;">Workshop on Enterprise Application Development, Reliability, and Security (Online mode)
-                        </span></p>
-                        <p><span class="" style="font-weight: 800 !important;">Date - </span>5th -9th February 2022</p>
-                        <p><span class="" style="font-weight: 800 !important;">Venue - </span>Technology Innovation and Incubation Centre ABV- IIITM Gwalior</p>
-                        <br/>
-                        <p> With the recent growth in the field of wireless communication, number of wireless          based application and services have emerged comprising large number of devices. In     this context, Internet of Things (IoT) is one of the emerging applications which allow           devices and objects get smarter by connecting them to the internet. IoT has wide          range   of application starting from industry, health to environment monitoring. This            workshop        will provide an opportunity to the participants to learn fundamentals of          IoT, design       standards and its challenges. Some of the topics which will be covered             in this workshop         include security issues in IoT and their countermeasures, IoT in             communication, use of           ML in IoT, and real-life use case of IoT. The aim of this         workshop is to appraise the        knowledge of faculty member, research scholar and            UG/PG students with current state   of the art technologies in IOT and challenges. 
-                        </p>
+                  </li>
+                  <!-- Card 2 -->
+                  <li class="card">
+                    <div class="img--container">
+                      <img src="/assets/img/Pic2.png" alt="Innovation in Design and Development of Hybrid Antennas for 5G Communication">
                     </div>
-                </div>
-                <div class="col-lg-6 col-sm-12 h-100 ">
-                    <div class="feature_item">
-                        <img src="/assets/img/pic4.png" class="rounded mb-2" height=200 width=400/>
-                        <p><span class="" style="font-weight: 800 !important;"> Workshop on Security and Privacy issues in IoT (Online mode)
-                        </span></p>
-                        <p><span class="" style="font-weight: 800 !important;">Date - </span>14th  – 18th February, 2022</p>
-                        <p><span class="" style="font-weight: 800 !important;">Venue - </span>Technology Innovation and Incubation Centre ABV- IIITM Gwalior</p>
-                        <br/>
-                        <p>With the recent growth in the field of wireless communication, number of wireless based application and services have emerged comprising large number of devices. In this context, Internet of Things (IoT) is one of the emerging applications which allow devices and objects get smarter by connecting them to the internet. IoT has wide range of application starting from industry, health to environment monitoring. This workshop will provide an opportunity to the participants to learn fundamentals of IoT, design standards and its challenges. Some of the topics which will be covered in this workshop include security issues in IoT and their countermeasures, IoT in communication, use of ML in IoT, and real-life use case of IoT. The aim of this workshop is to appraise the knowledge of faculty member, research scholar and UG/PG students with current state of the art technologies in IOT and challenges. 
-                        </p>
+                    <div class="card--text">
+                      <div class="text--container">
+                        <div class="text--header">
+                          <h2 class="text--title">Innovation in Design and Development of Hybrid Antennas for 5G Communication (Online mode)</h2>
+                          <p class="text--subtitle">15th -19th January 2022</p>
+                        </div>
+                        <div class="text--details">
+                          <p class="text--description">This FDP aims at providing strong theoretical and practical experience in the field of 5G Communication. In 5G Hybrid Antenna Design...</p>
+                            
+                        </div>
+                      </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-sm-12 h-100 ">
-                    <div class="feature_item">
-                        <p><span class="" style="font-weight: 800 !important;">Workshop on "Business Plan Preparation
-
-
-                        </span></p>
-                        <p><span class="" style="font-weight: 800 !important;">Date - </span>24th -28Tth March, 2022</p>
-                        <p><span class="" style="font-weight: 800 !important;">Venue - </span>Technology Innovation and Incubation Centre ABV- IIITM Gwalior</p>
-                        <br/>
-                        <p>With the recent growth in the field of wireless communication, number of wireless based application and services have emerged comprising large number of devices. In this context, Internet of Things (IoT) is one of the emerging applications which allow devices and objects get smarter by connecting them to the internet. IoT has wide range of application starting from industry, health to environment monitoring. This workshop will provide an opportunity to the participants to learn fundamentals of IoT, design standards and its challenges. Some of the topics which will be covered in this workshop include security issues in IoT and their countermeasures, IoT in communication, use of ML in IoT, and real-life use case of IoT. The aim of this workshop is to appraise the knowledge of faculty member, research scholar and UG/PG students with current state of the art technologies in IOT and challenges.
-                        </p>
+                  </li>
+                  <!-- Card 3 -->
+                  <li class="card">
+                    <div class="img--container">
+                      <img src="/assets/img/pic3.jpg" alt="Workshop on Enterprise Application Development, Reliability, and Security">
                     </div>
-                </div>
-                <div class="col-lg-6 col-sm-12 h-100 ">
-                    <div class="feature_item">
-                        <img src="/assets/img/pic6.jpg" class="rounded mb-2" height=200 width=400/>
-                        <p><span class="" style="font-weight: 800 !important;">ARIC’22 (Atal Research and Incubation Conclave)
-                        </span></p>
-                        <p><span class="" style="font-weight: 800 !important;">Date - </span>December 08-10, 2022</p>
-                        <p><span class="" style="font-weight: 800 !important;">Venue - </span>Technology Innovation and Incubation Centre ABV- IIITM Gwalior</p>
-                        <br/>
-                        <p>In this three days program 39 most prominent speaker/resource person has delivered their talks and total 239 participants have participated in this events in different categories. TIIC has announced the award for best startups and best idea presentation.
-                        </p>
+                    <div class="card--text">
+                      <div class="text--container">
+                        <div class="text--header">
+                          <h2 class="text--title">Workshop on Enterprise Application Development, Reliability, and Security (Online mode)</h2>
+                          <p class="text--subtitle">5th -9th February 2022</p>
+                        </div>
+                        <div class="text--details">
+                          <p class="text--description">With the recent growth in the field of wireless communication, the number of wireless-based application and services have emerged...</p>
+                            
+                        </div>
+                      </div>
                     </div>
-                </div>
+                  </li>
+                  <!-- Card 4 -->
+                  <li class="card">
+                    <div class="img--container">
+                      <img src="/assets/img/pic4.png" alt="Workshop on Security and Privacy issues in IoT">
+                    </div>
+                    <div class="card--text">
+                      <div class="text--container">
+                        <div class="text--header">
+                          <h2 class="text--title">Workshop on Security and Privacy issues in IoT (Online mode)</h2>
+                          <p class="text--subtitle">14th – 18th February, 2022</p>
+                        </div>
+                        <div class="text--details">
+                          <p class="text--description">With the recent growth in the field of wireless communication, the number of wireless-based application and services have emerged...</p>
+                            
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Card 5 -->
+                  <li class="card">
+                    <div class="img--container">
+                        <!-- Image will be added later -->
+                        <img src="/assets/img/examples/off1.jpg" alt="Tiic">
+                    </div>
+                    <div class="card--text">
+                      <div class="text--container">
+                        <div class="text--header">
+                          <h2 class="text--title">Workshop on 'Business Plan Preparation'</h2>
+                          <p class="text--subtitle">24th -28Tth March, 2022</p>
+                        </div>
+                        <div class="text--details">
+                          <p class="text--description">With the recent growth in the field of wireless communication, the number of wireless-based application and services have emerged...</p>
+                            
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Card 6 -->
+                  <li class="card">
+                    <div class="img--container">
+                      <img src="/assets/img/pic6.jpg" alt="ARIC’22 (Atal Research and Incubation Conclave)">
+                    </div>
+                    <div class="card--text">
+                      <div class="text--container">
+                        <div class="text--header">
+                          <h2 class="text--title">ARIC’22 (Atal Research and Incubation Conclave)</h2>
+                          <p class="text--subtitle">December 08-10, 2022</p>
+                        </div>
+                        <div class="text--details">
+                          <p class="text--description">In this three days program 39 most prominent speaker/resource person has delivered their talks and total 239 participants...</p>
+                            
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+              </ul>
             </div>
-            <h2 class="my-5" style="font-weight: 200;font-size:24px;color: #111;text-align:center" >In 2023</h2>
-            <div class="row feature_inner">
-                <div class="col-lg-6 col-sm-12 h-100 ">
-                    <div class="feature_item">
-                        <img src="/assets/img/pic 7.jpg" class="rounded mb-2" height=200 width=400/>
-                        <p><span class="" style="font-weight: 800 !important;">Technological Challenges in Digital Financial Inclusion
-                        </span></p>
-                        <p><span class="" style="font-weight: 800 !important;">Date - </span>20-21 April 20232</p>
-                        <p><span class="" style="font-weight: 800 !important;">Venue - </span>Technology Innovation and Incubation Centre ABV- IIITM Gwalior</p>
-                        <br/>
-                        <p>The growth of digital payments in India and the availability of various easy and convenient digital payment solutions have facilitated ease of living citizens, financial inclusion, and growth of business and economy. During the pandemic, the availability of contactless digital payment solutions such as BHIM-UPI facilitated social distancing and continuity of businesses, including small merchants. The benefits of using digital payments are an instant and convenient mode of payment, enhanced financial inclusion, increased transparency in the government system, improved speed and timely delivery, National Electronic Toll Collection (NETC) system, Bharat Bill Payment System, Enhanced Credit Access, Safe and secure, and so on. 
-
-                        </p>
-                        <p><span class="" style="font-weight: 800 !important;">Training team - </span>The members of the training team were Dr. Sunil Kumar, Dr. Mahendra Shukla, Dr. Anuja Dixit, and Dr. Anjali</p>
-                        <br/>
+            <div>
+                <h2 class="mb-3" style="font-weight: 200;font-size:24px;color: #111;text-align:center" >In 2023</h2>
+            <ul class="container events">
+                <li class="card">
+                  <div class="img--container">
+                    <img src="/assets/img/pic 7.jpg" alt="Technological Challenges in Digital Financial Inclusion" />
+                  </div>
+                  <div class="card--text">
+                    <div class="text--container">
+                      <div class="text--header">
+                        <h2 class="text--title">Technological Challenges in Digital Financial Inclusion</h2>
+                        <p class="text--subtitle">20-21 April 20232</p>
+                      </div>
+                      <div class="text--details">
+                        <p class="text--description">The growth of digital payments in India and the availability of various easy and convenient digital payment solutions have facilitated ease of living citizens, financial inclusion, and growth of business and economy. During the pandemic, the availability of contactless digital payment solutions such as BHIM-UPI facilitated social distancing and continuity of businesses, including small merchants...</p>
+                          
+                        <p class="text--team">The members of the training team were Dr. Sunil Kumar, Dr. Mahendra Shukla, Dr. Anuja Dixit, and Dr. Anjali</p>
+                      </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-sm-12 h-100 ">
-                    <div class="feature_item">
-
-                        <p><span class="" style="font-weight: 800 !important;">Applications of IoT Technology in Agriculture
-                        </span></p>
-                        <p><span class="" style="font-weight: 800 !important;">Date - </span> 12-14 May 2023</p>
-                        <p><span class="" style="font-weight: 800 !important;">Venue - </span>Technology Innovation and Incubation Centre ABV- IIITM Gwalior</p>
-                        <br/>
-                        <p>This workshop aims to provide a comprehensive overview of IoT applications in agriculture, highlighting the potential benefits, challenges, and best practices. The workshop will be suitable for researchers, policymakers, and technology providers who are interested in exploring the latest trends and innovations in IoT-enabled farming.
-                            Workshop Objectives was:
-                             Introduce the concept of IoT and its relevance to agriculture.
-                             Highlight the benefits of IoT in agriculture, such as precision farming, resource optimization, and data-driven decision-making.
-                             Discuss the challenges and limitations of IoT adoption in agriculture, such as data privacy, cybersecurity, and interoperability.
-                             Showcase real-world examples of IoT applications in agriculture, such as soil monitoring, weather forecasting, crop management, and livestock tracking.
-                        </p>
+                  </div>
+                </li>
+                <li class="card">
+                    <div class="img--container">
+                        <!-- Image will be added later -->
+                        <img src="/assets/img/examples/off1.jpg" alt="Tiic">
                     </div>
-                </div>
-                <div class="col-lg-6 col-sm-12 h-100 ">
-                    <div class="feature_item">
-                        
-                        <p><span class="" style="font-weight: 800 !important;"> Intelligent Transportation System toward safe, clean and sustainable Mobility
-                        </span></p>
-                        <p><span class="" style="font-weight: 800 !important;">Date - </span> 12th May to 13th May 2023</p>
-                        <p><span class="" style="font-weight: 800 !important;">Venue - </span>Technology Innovation and Incubation Centre ABV- IIITM Gwalior</p>
-                        <br/>
-                        <p>The TIIC sponsored workshop on "Intelligent Transportation Systems towards Safe, Clean, and Sustainable Mobility" successfully provided a platform for researchers, experts, and students to delve into the advancements, challenges, and potential of intelligent transportation systems. The diverse range of topics covered in the talks enriched the participants' understanding and stimulated discussions on various aspects of transportation systems. The coordinators, Dr. Nalin Kumar Sharma, Dr. Rakesh Chowdhary, Dr. Alok Kamal, and Dr. Praveen Singya, played a vital role in organizing and managing the workshop. Their commitment, meticulous planning, and dedication ensured the smooth execution of the event. We extend our sincere appreciation to the TIIC for their sponsorship, which made this workshop possible. 
-                        </p>
-                        <p><span class="" style="font-weight: 800 !important;">Coordinators - </span>Dr. Nalin Kumar Sharma, Dr. Rakesh Chowdhary, Dr. Alok Kamal, Dr. Praveen</p>
-                        <br/>
+                    <div class="card--text">
+                      <div class="text--container">
+                        <div class="text--header">
+                          <h2 class="text--title">Intelligent Transportation System toward safe, clean and sustainable Mobility</h2>
+                          <p class="text--subtitle">12th May to 13th May 2023</p>
+                        </div>
+                        <div class="text--details">
+                          <p class="text--description">The TIIC sponsored workshop on 'Intelligent Transportation Systems towards Safe, Clean, and Sustainable Mobility' successfully provided a platform for researchers, experts, and students to delve into the advancements, challenges, and potential of intelligent transportation systems...</p>
+                          <p class="text--team">Coordinators - Dr. Nalin Kumar Sharma, Dr. Rakesh Chowdhary, Dr. Alok Kamal, Dr. Praveen</p>
+                            
+                        </div>
+                      </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-sm-12 h-100 ">
-                    <div class="feature_item">
-                        
-                        <p><span class="" style="font-weight: 800 !important;">Innovation, IPR and Start-ups in Environment, Energy and Health Care: Challenges and Opportunities
-                        </span></p>
-                        <p><span class="" style="font-weight: 800 !important;">Date - </span>20th  May 21st  May 2023</p>
-                        <p><span class="" style="font-weight: 800 !important;">Venue - </span>Technology Innovation and Incubation Centre ABV- IIITM Gwalior</p>
-                        <br/>
-                        <p>The TIIC sponsored workshop on " Innovation, IPR and Start-ups in Environment, Energy and Health Care: Challenges and Opportunities Coordinators " successfully provided a platform for researchers, experts, and students to delve into the advancements, challenges, and potential of intelligent transportation systems. The diverse range of topics covered in the talks enriched the participants' understanding and stimulated discussions on various aspects of startups. Dr. Sandeep patil, Director at E-Spin Nanotech Pvt. Ltd. 
-                        </p>
-                        <p><span class="" style="font-weight: 800 !important;">Coordinators - </span>Prof Pankaj Srivastava & Prof Anurag Srivastava</p>
-                        <br/>
+                  </li>
+                  <li class="card">
+                    <div class="img--container">
+                        <!-- Image will be added later -->
+                        <img src="/assets/img/examples/off1.jpg" alt="Tiic">
                     </div>
-                </div>
-                <div class="col-lg-6 col-sm-12 h-100 ">
-                    <div class="feature_item">
-                        
-                        <p><span class="" style="font-weight: 800 !important;">Applications of Dynamical Systems in Health and Environment
-                        </span></p>
-                        <p><span class="" style="font-weight: 800 !important;">Date - </span>12-13 May 2023 </p>
-                        <p><span class="" style="font-weight: 800 !important;">Venue - </span>Technology Innovation and Incubation Centre ABV- IIITM Gwalior</p>
-                        <br/>
-                        <p>The utilization of dynamical systems applications has showcased significant worth across a range of diverse disciplines, aiding decision-makers in grasping and forecasting the dynamic behaviors exhibited by complex systems. This plays a pivotal role in bolstering the creation and refinement of effective policy measures. Keeping this in view, the workshop on           Applications of Dynamical Systems in Health and Environment is organized by the department of Engineering Sciences during June 05-06, 2023, under the sponsorship of TIIC, ABV-IIITM Gwalior
-                        </p>
+                    <div class="card--text">
+                      <div class="text--container">
+                        <div class="text--header">
+                          <h2 class="text--title">Innovation, IPR and Start-ups in Environment, Energy and Health Care: Challenges and Opportunities</h2>
+                          <p class="text--subtitle">20th May to 21st May 2023</p>
+                        </div>
+                        <div class="text--details">
+                          <p class="text--description">The TIIC sponsored workshop on 'Innovation, IPR and Start-ups in Environment, Energy and Health Care: Challenges and Opportunities' successfully provided a platform for researchers, experts, and students to delve into the advancements, challenges, and potential of intelligent transportation systems...</p>
+                          <p class="text--team">Coordinators - Prof Pankaj Srivastava & Prof Anurag Srivastava</p>
+                            
+                        </div>
+                      </div>
                     </div>
-                </div>
+                  </li>
+                    
+                  <li class="card">
+                    <div class="img--container">
+                        <!-- Image will be added later -->
+                        <img src="/assets/img/examples/off1.jpg" alt="Tiic">
+                    </div>
+                    <div class="card--text">
+                      <div class="text--container">
+                        <div class="text--header">
+                          <h2 class="text--title">Applications of Dynamical Systems in Health and Environment</h2>
+                          <p class="text--subtitle">12-13 May 2023</p>
+                        </div>
+                        <div class="text--details">
+                          <p class="text--description">The utilization of dynamical systems applications has showcased significant worth across a range of diverse disciplines, aiding decision-makers in grasping and forecasting the dynamic behaviors exhibited by complex systems. This plays a pivotal role in bolstering the creation and refinement of effective policy measures...</p>
+                          <!-- Since team data is empty for Card 3, no team information provided -->
+                            
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  
+                <!-- Add more <li> elements for other events using similar structure -->
+              </ul>
             </div>
+            
         </div>
     </section>
 
