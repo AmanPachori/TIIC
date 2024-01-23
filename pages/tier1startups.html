@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="/assets/css/footer.css">
         <style>
 
-            .masthead{
+            .mastheads{
                 max-height: 10vh !important;
             }
 
@@ -122,6 +122,69 @@
         justify-content: center;
         align-items: center;
     }
+
+    header.mastheads {
+  width: 100%;
+  height: 10vh !important;
+  color: white;
+  font-size: 18px;
+  blur: auto;
+  background-color: #0e1a35;
+  object-fit: cover;
+  object-position: center;
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+  
+
+  /*	clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 79vh);*/
+}
+
+header.mastheads .header-content {
+  max-width: 500px;
+  margin-bottom: 50px;
+  text-align: center;
+
+}
+
+header.mastheads .header-content h1 {
+  font-size: 30px;
+}
+
+header.mastheads .device-container {
+  max-width: 325px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  border  : 1px solid white
+
+}
+
+header.mastheads .device-container .screen img {
+  border-radius: 3px;
+}
+
+@media (min-width: 992px) {
+  header.mastheads {
+    height: 70vh;
+    min-height: 405px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  header.mastheads .header-content {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  header.mastheads .header-content h1 {
+    font-size: 50px;
+  }
+
+  header.mastheads .device-container {
+    max-width: 325px;
+  }
+}
 
     
         </style>
@@ -641,8 +704,8 @@
         </section> -->
 
     
-    <header class="masthead">
-      <div class="container h-100">
+    <header class="mastheads">
+      <div class="container ">
             <div class="header-content mx-auto">
               <h1 class="mt-5">Tide 1 Start Ups</h1>
              
@@ -808,7 +871,7 @@
                         <ul>
                             <li><a href="../pages/home.html"">Home</a></li>
                             <li><a href="../pages/aboutus.html">About us</a></li>
-                            <li><a href="../pages/startups.html">Start ups</a></li>
+                            <li><a href="../pages/tier2startups.html">Start ups</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-2">
